@@ -9,8 +9,16 @@
 #import "SVModalWebViewController.h"
 
 @interface SVWebViewController : UIViewController
+@property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
+@property (nonatomic, strong) UIBarButtonItem *forwardBarButtonItem;
+@property (nonatomic, strong) UIBarButtonItem *refreshBarButtonItem;
+@property (nonatomic, strong) UIBarButtonItem *stopBarButtonItem;
+@property (nonatomic, strong) UIBarButtonItem *actionBarButtonItem;
+
+@property (nonatomic, strong) UIWebView *webView;
 
 - (id)initWithAddress:(NSString*)urlString;
 - (id)initWithURL:(NSURL*)URL;
+- (void)updateToolbarItems;
 
 @end
